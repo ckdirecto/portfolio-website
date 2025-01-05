@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@layer utilities {
+    .dot-pattern {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        background-image: radial-gradient(#ffffff33 1px, transparent 1px);
+        background-size: 16px 16px;
+    }
+    .dot-mask {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        background-image: radial-gradient(#ffffff33 1px, transparent 1px);
+        background-size: 16px 16px;
+        -webkit-mask-image: radial-gradient(
+            ellipse 50% 50% at 50% 50%,
+            #000 60%,
+            transparent 100%
+        );
+        mask-image: radial-gradient(
+            ellipse 50% 50% at 50% 50%,
+            #000 60%,
+            transparent 100%
+        );
+    }
+    .bg-bento {
+        background-color: #1D1D1D;
+        @apply rounded-[35px];
+    }
+    .background {
+        background-color: #141414;
+    }
+    .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .gradient-bento {
+        background: linear-gradient(
+            135deg,
+            rgba(45, 8, 71, 0.1) 0%,
+            rgba(113, 46, 221, 0.1) 100%
+        );
+        backdrop-filter: blur(10px);
+        @apply rounded-[35px];
+    }
+}
